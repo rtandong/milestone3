@@ -2,63 +2,67 @@ body {
     font-family: Arial, sans-serif;
     margin: 20px;
     background-color: #f4f4f4;
+    height: 100vh; 
+    display: flex; 
+    justify-content: center;
+    align-items: center; 
 }
-
 
 header {
     background-color: #ffc629;
     color: #2f2020;
     padding: 10px;
     text-align: center;
+    width: 100%; 
+    position: absolute;
+    top: 0;
+    left: 0;
 }
-
 
 nav ul {
     list-style: none;
     padding: 0;
 }
 
-
 nav ul li {
     display: inline;
     margin: 0 15px;
 }
-
 
 nav ul li a {
     color: rgb(44, 39, 39);
     text-decoration: none;
 }
 
-
 h1 {
     text-align: center;
 }
 
-
 #search {
     margin: 20px 0;
     text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; 
 }
-
 
 #search input {
     width: 300px;
     padding: 10px;
-    margin-right: 10px;
+    margin-bottom: 10px; 
 }
-
 
 #search button {
     padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
 }
-
 
 #results ul {
     list-style: none;
     padding: 0;
 }
-
 
 #results ul li {
     margin: 15px 0;
