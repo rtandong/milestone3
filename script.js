@@ -21,7 +21,8 @@ $(document).ready(function () {
 
 
     function displayResults(books) {
-        $('#results').empty();
+        $('#results').empty(); // Clear previous results
+        console.log("Books to display:", books); // Log the books being passed in
         if (books.length === 0) {
             $('#results').html('<p>No results found.</p>');
             return;
@@ -37,6 +38,7 @@ $(document).ready(function () {
             `);
         });
     }
+    
 
 
     function displayPagination(totalPages, currentPage) {
