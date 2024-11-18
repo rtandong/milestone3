@@ -1,69 +1,128 @@
+
 body {
     font-family: Arial, sans-serif;
-    margin: 20px;
     background-color: #f4f4f4;
-    height: 100vh; 
-    display: flex; 
-    justify-content: center;
-    align-items: center; 
+    margin: 0;
+    padding: 0;
 }
 
 header {
     background-color: #ffc629;
     color: #2f2020;
-    padding: 10px;
     text-align: center;
-    width: 100%; 
-    position: absolute;
-    top: 0;
-    left: 0;
+    padding: 15px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-nav ul {
-    list-style: none;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 15px;
-}
-
-nav ul li a {
-    color: rgb(44, 39, 39);
-    text-decoration: none;
-}
-
-h1 {
-    text-align: center;
+.container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
 }
 
 #search {
-    margin: 20px 0;
     text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column; 
+    margin-bottom: 20px;
 }
 
 #search input {
     width: 300px;
     padding: 10px;
-    margin-bottom: 10px; 
+    margin-right: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
 }
 
 #search button {
     padding: 10px 20px;
-    font-size: 16px;
+    background-color: #2f2020;
+    color: #ffc629;
+    border: none;
     cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
 }
 
-#results ul {
+#search button:hover {
+    background-color: #494444;
+}
+#results, #bookshelf {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+#results ul, #bookshelf .shelf-content {
     list-style: none;
     padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
-#results ul li {
-    margin: 15px 0;
+#results li, .shelf-content .book {
+    flex: 0 0 200px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+#results li:hover, .shelf-content .book:hover {
+    transform: scale(1.05);
+}
+
+.book img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+.book p {
+    margin: 10px 0 0;
+    font-size: 14px;
+}
+#pagination {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.page-link {
+    display: inline-block;
+    margin: 0 5px;
+    padding: 5px 10px;
+    background-color: #2f2020;
+    color: #ffc629;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.page-link.active, .page-link:hover {
+    background-color: #494444;
+}
+
+#bookDetails {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#bookDetails h2 {
+    margin-top: 0;
+}
+
+.details-content img {
+    width: 150px;
+    margin-right: 20px;
+    float: left;
+}
+
+.details-content {
+    overflow: auto;
 }
